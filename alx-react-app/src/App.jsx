@@ -11,11 +11,11 @@ function App() {
 
   return (
     <>
-      <WelcomeMessage/>
+      <WelcomeMessage />
       <hr></hr>
-        <Header/>
-        <MainContent/>
-        <Footer/>
+        <Header />
+        <MainContent />
+        <Footer />
       <hr></hr>
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
       <hr></hr>
