@@ -4,6 +4,7 @@ import WelcomeMessage from './WelcomeMessage'
 import Header from './Header'
 import MainContent from './MainContent'
 import Footer from './Footer'
+import UserProfile from './UserProfile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +17,8 @@ function App() {
         <MainContent/>
         <Footer/>
       <hr></hr>
-        <UserProfile name='Charles Mizinga' age='22' bio='Hey there am learning React with alx veryy well structured'/>
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
+      <hr></hr>
     </>
   );
 }
