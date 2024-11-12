@@ -4,9 +4,9 @@ import Home from '../Home';
 
 const Navbar = () => {
     return (
-        <div>
+        <div style={{ backgroundColor: "#f8f9fa", display: "flex", justifyContent: "space-around", padding: "1rem" }}>
             <nav>
-                <ul>
+                <ul style={{ listStyle: "none", display: "flex", gap: "1rem", margin: 0, padding: 0 }}>
                     <li>
                         <Link to="/">Home</Link>
                     </li>
