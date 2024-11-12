@@ -4,8 +4,11 @@ const UserContext = createContext();
 
 export const useUser = () => useContext(UserContext);
 
-export const UserProvider = ({ children, value }) => (
+const UserProvider = ({ children, value }) => (
     <UserContext.Provider value={value}>
         {children}
     </UserContext.Provider>
 );
+
+export { UserProvider };
+export default UserContext;
