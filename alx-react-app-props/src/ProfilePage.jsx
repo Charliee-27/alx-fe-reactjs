@@ -1,11 +1,8 @@
+import React from 'react';
 import UserInfo from './UserInfo';
 
 function ProfilePage() {
-  return (
-    <>
-        <h1>User Is: {userdata} </h1>
-    </>
-  )
+    return <UserInfo />;
 }
 
 export default ProfilePage;
