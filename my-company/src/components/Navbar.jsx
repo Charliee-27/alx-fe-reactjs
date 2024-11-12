@@ -6,9 +6,7 @@ import Home from '../Home'
 const Navbar = () => {
     return (
         <div> 
-            <ul>
-                <li><Home/></li>
-            </ul>
+           Navbar
         </div>
     )
 }
