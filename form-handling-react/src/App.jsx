@@ -1,7 +1,7 @@
 
 import './App.css'
 import RegistrationForm from './componets/RegistrationForm.jsx'
-import FormikForm from './componets/FormikForm.jsx'
+import formikForm from './componets/formikForm.js'
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
     <>
      <RegistrationForm/>
      <hr/>
-     <FormikForm/>
+     <formikForm/>
     </>
   )
 }
