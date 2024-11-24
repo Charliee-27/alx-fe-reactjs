@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-const formikForm = () => {
+const FormikForm = () => {
   const initialValues = {
     name: '',
     email: '',
@@ -20,36 +20,44 @@ const formikForm = () => {
     setSubmitting(false);
   };
 
-  return (
-    <Formik
-      initialValues={initialValues}
-      validationSchema={validationSchema}
-      onSubmit={onSubmit}
-    >
-      {({ isSubmitting }) => (
-        <Form>
-          <div>
-            <label>Name:</label>
-            <Field type="text" name="name" />
-            <ErrorMessage name="name" component="div" />
-          </div>
-          <div>
-            <label>Email:</label>
-            <Field type="email" name="email" />
-            <ErrorMessage name="email" component="div" />
-          </div>
-          <div>
-            <label>Password:</label>
-            <Field type="password" name="password" />
-            <ErrorMessage name="password" component="div" />
-          </div>
-          <button type="submit" disabled={isSubmitting}>
-            Submit
-          </button>
-        </Form>
-      )}
-    </Formik>
+  return React.createElement(
+    Formik,
+    {
+      initialValues: initialValues,
+      validationSchema: validationSchema,
+      onSubmit: onSubmit
+    },
+    ({ isSubmitting }) => React.createElement(
+      Form,
+      null,
+      React.createElement(
+        'div',
+        null,
+        React.createElement('label', null, 'Name:'),
+        React.createElement(Field, { type: 'text', name: 'name' }),
+        React.createElement(ErrorMessage, { name: 'name', component: 'div' })
+      ),
+      React.createElement(
+        'div',
+        null,
+        React.createElement('label', null, 'Email:'),
+        React.createElement(Field, { type: 'email', name: 'email' }),
+        React.createElement(ErrorMessage, { name: 'email', component: 'div' })
+      ),
+      React.createElement(
+        'div',
+        null,
+        React.createElement('label', null, 'Password:'),
+        React.createElement(Field, { type: 'password', name: 'password' }),
+        React.createElement(ErrorMessage, { name: 'password', component: 'div' })
+      ),
+      React.createElement(
+        'button',
+        { type: 'submit', disabled: isSubmitting },
+        'Submit'
+      )
+    )
   );
 };
 
-export default formikForm;
+export default FormikForm;
