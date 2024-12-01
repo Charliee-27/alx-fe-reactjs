@@ -1,7 +1,7 @@
 
 import './App.css'
 import RegistrationForm from './componets/RegistrationForm.jsx'
-import formikForm from './componets/formikForm.js'
+import formikForm from './componets/formikForm.jsx'
 
 function App() {
 
