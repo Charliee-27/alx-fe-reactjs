@@ -3,19 +3,19 @@ import React, { useState } from 'react';
 const AddRecipeForm = () => {
   const [title, setTitle] = useState('');
   const [ingredients, setIngredients] = useState('');
-  const [instructions, setInstructions] = useState('');
+  const [steps, setSteps] = useState('');
   const [error, setError] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // Simple validation
-    if (!title || !ingredients || !instructions) {
+    if (!title || !ingredients || !steps) {
       setError('Please fill in all fields.');
       return;
     }
     setError('');
     // Handle form submission logic here, such as sending data to a server or updating the state
-    console.log({ title, ingredients, instructions });
+    console.log({ title, ingredients, steps });
   };
 
   return (
@@ -42,11 +42,11 @@ const AddRecipeForm = () => {
         />
       </div>
       <div className="mb-4">
-        <label className="block text-gray-700 font-bold mb-2" htmlFor="instructions">Instructions</label>
+        <label className="block text-gray-700 font-bold mb-2" htmlFor="steps">Steps</label>
         <textarea
-          id="instructions"
-          value={instructions}
-          onChange={(e) => setInstructions(e.target.value)}
+          id="steps"
+          value={steps}
+          onChange={(e) => setSteps(e.target.value)}
           className="w-full px-3 py-2 border rounded"
         />
       </div>
